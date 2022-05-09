@@ -1,0 +1,9 @@
+---
+sections:
+  - name: Section 1
+    notes: "Short Section description"
+    links:
+      - name: Link Name 1
+        notes: "Short note which appear as a tooltip."
+        link: https://google.com
+
