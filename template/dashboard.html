@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+
+{% for section in sections %}
+<div class="card card-frame">
+    <div class="card-header">
+        <STRONG>{{section.name}}</STRONG>
+    </div>
+    <div class="card-body">
+        <ul>
+            {% for link in section.links %}
+            <li>
+                <a href="{{link.url}}">{{link.name}}</a>
+            </li>
+        </ul>
+        {% endfor %}
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}
+
