@@ -1,14 +1,21 @@
-import sys
+import logging
 
 from board_generator import BoardRenderer
 
+logging.basicConfig(level="DEBUG")
+
+logger = logging.getLogger(__name__)
+
 if __name__ == '__main__':
-    args = sys.argv[1:]
     DATA_FILE = "./links.yaml"
     OUTPATH = "./dashboard/dashboard.html"
 
-    print(f"Initialize Board class")
+    logger.info(f"Used variables: "
+                f"Data file: {DATA_FILE} | "
+                f"Output folder: {OUTPATH}")
+
+    logger.info(f"Initialize Board creator...")
     board = BoardRenderer(DATA_FILE)
-    print(f"Initialized. Renderng")
+    logger.info(f"Initialized. Rendering the Dashboard")
     board_path = board.render(OUTPATH)
-    print(f"Created at: {board_path}")
+    logger.info(f"Created at: {board_path}")

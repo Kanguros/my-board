@@ -68,32 +68,85 @@ Bootstrap theme is used called **Now-UI Kit**
 
 -   https://demos.creative-tim.com/now-ui-kit/docs/1.0/getting-started/introduction.html?ref=adnp-readme
 
-#### Custom attributes
+#### Custom CSS
 
-All custom definition are in `custom.css` file.
+All custom definition are in `.\dashboard\assets\css\custom.css` file.
 
-## Input schema
+## Data schema
 
-Simple definition of a input file:
+Definition of an input data file structure.
+
 
 ```python
-class Link(TypedDict, 
+Color = Literal['Primary', 'Secondary',
+                'Success', 'Danger',
+                'Warning', 'Info',
+                'Light', 'Dark']
+
+
+class Link(TypedDict,
            total=False):
+    """
+    Single link, shown as a button.
+
+    Args:
+        name: Text inside button.
+        url: Any address (supported by web-browser).
+        notes: Additional information in tooltip.
+            Default: None.
+        color: Color of a button.
+            Default: Secondary.
+    """
     name: str
-    notes: str
     url: str
+    notes: str
+    color: Color
 
 
-class Section(TypedDict, 
+class Section(TypedDict,
               total=False):
+    """
+    Box (Bootstrap's Card) with Button links.
+
+    Args:
+        name: Title of a Card.
+        notes: Additional information in tooltip.
+            Default: None
+        color: Color of a Card's header/title.
+            Default: Primary.
+        links: List of `Link`s to put inside.
+    """
     name: str
     notes: str
+    color: Color
     links: List[Link]
 
 
-class Board(TypedDict, 
+class Board(TypedDict,
             total=False):
-    nav: List[Link]
+    """Represent the Dashboard.
+
+    Attrs:
+        name: Name of the page. Also placed in navbar and in page title.
+            Default: Dashboard
+        navbar: List of `Link`s to put in navbar section.
+            Default: []
+        sections: List of `Section`s.
+            Default: []
+    """
+    name: str
+    navbar: List[Link]
     sections: List[Section]
 ```
+
+#### Colors
+
+Default BS's *colors* are used: `Primary, Secondary, Success, Danger, Warning, Info, Light, Dark`
+
+
+
+_Usually, such definitions helps me not to remember the data's structure names I'm working with. 
+The IDE hints take care of that. I did not foresee one thing. 
+Referencing a variable in Jinja template is a, lets say, context less. No hints popup...
+Nevertheless, it is a good reference point how the data in YAML should look like._
 

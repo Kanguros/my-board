@@ -1,5 +1,6 @@
 ---
-nav:
+name: "My Dashboard"
+navbar:
   - name: Google
     notes: "Short note which appear as a tooltip."
     url: https://google.com

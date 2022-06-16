@@ -1,4 +1,4 @@
-<div class="all-cards">
+<div class="container-cards">
     {% for section in sections %}
     <div class="card single-card">
         <div class="card-header">
@@ -9,12 +9,14 @@
             </ul>
         </div>
         <div class="card-body">
-            <div class="card-links">
-                {% for link in section.links %}
-                <a href="{{link.url}}" class="btn btn-secondary" role="button" aria-pressed="true">
-                    {{link.name}}
-                </a>
-                {% endfor %}
+            <div class="container">
+                <div class="card-links">
+                    {% for link in section.links %}
+                    <a href="{{link.url}}" class="btn btn-secondary" role="button" aria-pressed="true">
+                        {{link.name}}
+                    </a>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
