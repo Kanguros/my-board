@@ -2,5 +2,6 @@
 poetry.lock
 .data/*
 .idea
+links.yaml
 
 __pycache__

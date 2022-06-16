@@ -1,0 +1,25 @@
+---
+name: "Dashboard"
+navbar:
+  - name: Python
+    notes: "Short note which appear as a tooltip."
+    url: https://www.python.org/
+sections:
+  - name: Search Engines
+    notes: "Search Engines section description"
+    links:
+      - name: Google
+        notes: "Google. Short note which appear as a tooltip."
+        url: https://google.com
+      - name: Google
+        notes: "DuckDuckGo. Short note which appear as a tooltip."
+        url: https://duckduckgo.com/
+  - name: VCS
+    notes: "VCS Section description"
+    links:
+      - name: GitHub
+        notes: "GitHub. Short note which appear as a tooltip."
+        url: https://github.com
+      - name: GitLab
+        notes: "GitLab. Short note which appear as a tooltip."
+        url: https://gitlab.com

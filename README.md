@@ -1,38 +1,42 @@
 # Links Dashboard
 
-Single HTML local page with sections, links and other utilities, generated based on input from YAML file. 
+Single HTML local page. Divided into sections with its own links. Generated based on input from YAML file. 
 
 ----
 
-
-
-`links.yaml`
+**Input**
 
 ```yaml
+---
+name: "Dashboard"
+navbar:
+  - name: Python
+    notes: "Short note which appear as a tooltip."
+    url: https://www.python.org/
 sections:
   - name: Search Engines
-    notes: "Short Section description"
+    notes: "Search Engines section description"
     links:
       - name: Google
-        notes: "Short note which appear as a tooltip."
+        notes: "Google. Short note which appear as a tooltip."
         url: https://google.com
-      - name: DuckDuck
-        notes: "Short note which appear as a tooltip."
-        url: https://google.com
-  - name: Usefull
-    notes: "Short Section description"
+      - name: DuckDuckGo
+        notes: "DuckDuckGo. Short note which appear as a tooltip."
+        url: https://duckduckgo.com/
+  - name: VCS
+    notes: "VCS Section description"
     links:
       - name: GitHub
-        notes: "Short note which appear as a tooltip."
+        notes: "GitHub. Short note which appear as a tooltip."
         url: https://github.com
-      - name: Wykop
-        notes: "Short note which appear as a tooltip."
-        url: https://wykop.pl
+      - name: GitLab
+        notes: "GitLab. Short note which appear as a tooltip."
+        url: https://gitlab.com
 ```
 
+**Output**
 
-
-<img src="C:\Users\Kadu\AppData\Roaming\Typora\typora-user-images\image-20220616073331038.png" alt="image-20220616073331038" style="zoom:80%;" />
+![dashboard_example](dashboard_example.png)
 
 
 
@@ -43,26 +47,24 @@ sections:
      -   `pyproject.toml` -> `poetry install` 
      -   `requirements.txt` -> `pip install requirements.txt`
 
-2.   Fill `links.yaml` with data
+2.   Fill `links.yaml` with your own data.
+     -   You may use template file to do that: `.\links.yaml.template`
 
 3.   Run `python .\script.py` from inside 
 
-     
-
-     
 
 ## Template
 
-Page is generated using `jinja` templating engine. It consist of files:
+Page is generated using `Jjinja` templating engine. It consist of files:
 
 -   `base.html` - Main file, include the rest ones.
 -   `cards.html `- Whole content is here. Display cards with links inside.
--   `footer.html` - Bottom *navbar*.
--   `nav.html` - File for navbar.
+-   `footer.html` - Bottom *navbar*. 
+-   `nav.html` - Navigation bar.
 
-## Theme
+## Look & Theme
 
-Bootstrap theme is used called **Now-UI Kit**
+Bootstrap theme is used: **Now-UI Kit**. Few links which might get be useful.
 
 -   https://github.com/creativetimofficial/now-ui-kit
 
@@ -70,7 +72,7 @@ Bootstrap theme is used called **Now-UI Kit**
 
 #### Custom CSS
 
-All custom definition are in `.\dashboard\assets\css\custom.css` file.
+All custom styles are in `.\dashboard\assets\css\custom.css` file.
 
 ## Data schema
 
@@ -139,14 +141,19 @@ class Board(TypedDict,
     sections: List[Section]
 ```
 
-#### Colors
+#### Colours
 
-Default BS's *colors* are used: `Primary, Secondary, Success, Danger, Warning, Info, Light, Dark`
+Default BS's *colours* are used: `Primary, Secondary, Success, Danger, Warning, Info, Light, Dark`
+
+>   Usually, such definitions helps me not to remember the data structure's names I'm working with. The IDE's hints take care of that but I did not foresee one thing. 
+>   Referencing a variable in Jinja template is a, lets say, context less. It doesn't *know* about Python's objects.
+>
+>   Nevertheless, it is a good reference point, how the data in YAML should look like.
 
 
 
-_Usually, such definitions helps me not to remember the data's structure names I'm working with. 
-The IDE hints take care of that. I did not foresee one thing. 
-Referencing a variable in Jinja template is a, lets say, context less. No hints popup...
-Nevertheless, it is a good reference point how the data in YAML should look like._
+## TODO
 
+-   **FIX ALIGNMENT.**
+-   Add colouring to cards and headers.
+-   I assume, many more.
