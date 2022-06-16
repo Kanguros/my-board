@@ -1,0 +1,12 @@
+<div class="section">
+    <nav class="navbar navbar-expand-lg fixed-top bg-primary topper">
+        <div class="container">
+            <a class="navbar-brand" href="#">Dashboard</a>
+            {% for nav_item in nav %}
+            <a href="{{nav_item.url}}" class="btn btn-secondary" role="button" aria-pressed="true">
+                {{nav_item.name}}
+            </a>
+            {% endfor %}
+        </div>
+    </nav>
+</div>

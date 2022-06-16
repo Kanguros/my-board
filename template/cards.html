@@ -1,0 +1,22 @@
+<div class="all-cards">
+    {% for section in sections %}
+    <div class="card single-card">
+        <div class="card-header">
+            <ul class="nav bg-warning justify-content-center">
+                <li class="nav-item"><a class="nav-link" href="#">
+                    {{section.name}}
+                </a></li>
+            </ul>
+        </div>
+        <div class="card-body">
+            <div class="card-links">
+                {% for link in section.links %}
+                <a href="{{link.url}}" class="btn btn-secondary" role="button" aria-pressed="true">
+                    {{link.name}}
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
