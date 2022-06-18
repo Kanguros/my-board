@@ -1,10 +1,16 @@
 # Links Dashboard
 
-Single HTML local page. Divided into sections with its own links. Generated based on input from YAML file. 
+It is a generator of link's dashboard. Based on input from YAML file, single static website is generated.
 
-----
+![img_1.png](img_1.png)
 
-**Input**
+## Example
+
+### Output
+
+![img.png](img.png)
+
+### Input
 
 ```yaml
 ---
@@ -34,28 +40,23 @@ sections:
         url: https://gitlab.com
 ```
 
-**Output**
-
-![dashboard_example](dashboard_example.png)
-
-
-
 ## How to use
 
-1.   Install requirements 
-
+1. Install requirements
      -   `pyproject.toml` -> `poetry install` 
      -   `requirements.txt` -> `pip install requirements.txt`
 
-2.   Fill `links.yaml` with your own data.
-     -   You may use template file to do that: `.\links.yaml.template`
+2. Create or edit `links.yaml` file. Add your own data.
+     - You may use template file to do that: `.\links.yaml.template`
+     - Data schema can be found in `board_generator`
 
-3.   Run `python .\script.py` from inside 
+3. Once filled, execute `python .\script.py`
+   - Dashboard is generated at `.\dashboard\dashboard.html`
 
 
 ## Template
 
-Page is generated using `Jjinja` templating engine. It consist of files:
+Page is generated using `Jjinja` templating engine. It consists of files:
 
 -   `base.html` - Main file, include the rest ones.
 -   `cards.html `- Whole content is here. Display cards with links inside.
@@ -151,9 +152,14 @@ Default BS's *colours* are used: `Primary, Secondary, Success, Danger, Warning, 
 >   Nevertheless, it is a good reference point, how the data in YAML should look like.
 
 
+## How to edit
 
-## TODO
+In order to change a dashboard look, you may:
 
--   **FIX ALIGNMENT.**
--   Add colouring to cards and headers.
--   I assume, many more.
+### Adjust `custom.css`
+
+Go to `./dashboard/assets/css/custom.css` file and change the CSS settings.
+
+### Adjust template
+
+Go to `./template` folder and change desire Jinja templates.

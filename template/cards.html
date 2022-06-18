@@ -1,24 +1,55 @@
-<div class="container-cards">
-    {% for section in sections %}
-    <div class="card single-card">
-        <div class="card-header">
-            <ul class="nav bg-warning justify-content-center">
-                <li class="nav-item"><a class="nav-link" href="#">
-                    {{section.name}}
-                </a></li>
-            </ul>
-        </div>
-        <div class="card-body">
-            <div class="container">
-                <div class="card-links">
-                    {% for link in section.links %}
-                    <a href="{{link.url}}" class="btn btn-secondary" role="button" aria-pressed="true">
-                        {{link.name}}
-                    </a>
-                    {% endfor %}
-                </div>
+{% macro place_header(section) -%}
+    {% if section.color %}
+        {% set section_color = section.color %}
+    {% else %}
+        {% set section_color = 'warning' %}
+    {% endif %}
+
+    {% if section.notes %}
+        <h4 class="card-head badge badge-{{section_color}}" data-toggle="tooltip" title="{{section.notes}}">
+    {% else %}
+        <h4 class="card-head badge badge-{{section_color}}">
+    {% endif %}
+            {{section.name}}
+        </h4>
+{%- endmacro %}
+
+
+{% macro place_link(l) -%}
+    {% if l.color %}
+        {% set color = l.color %}
+    {% else %}
+        {% set color = 'secondary' %}
+    {% endif %}
+
+    {% if l.notes %}
+        <a href="{{l.url}}" class="btn btn-{{color}}" data-toggle="tooltip" title="{{l.notes}}">
+    {% else %}
+        <a href="{{l.url}}" class="btn btn-{{color}}">
+    {% endif %}
+            {{l.name}}
+        </a>
+{%- endmacro %}
+
+
+{% macro place_section(section) -%}
+<div class="card single-card text-center glass">
+    <div class="card-body">
+        {{ place_header(section) }}
+        <div class="container">
+            <div class="card-links">
+                {% for link in section.links %}
+                    {{ place_link(link) }}
+                {% endfor %}
             </div>
         </div>
     </div>
+</div>
+{%- endmacro %}
+
+
+<div class="container-cards">
+    {% for section in sections %}
+        {{ place_section(section) }}
     {% endfor %}
 </div>

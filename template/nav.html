@@ -1,10 +1,10 @@
-<nav class="navbar navbar-expand-lg fixed-top bg-primary topper">
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark  topper">
     <div class="container">
         <a class="navbar-brand" href="#">{{ name if name else 'Dashboard' }}</a>
         {% if nav %}
-        {% for nav_item in nav %}
-        <a class="navbar-brand" href="{{nav_item.url}}">{{nav_item.name}}</a>
-        {% endfor %}
+            {% for nav_item in nav %}
+            <a class="navbar-brand" href="{{nav_item.url}}">{{nav_item.name}}</a>
+            {% endfor %}
         {% endif %}
     </div>
 </nav>
