@@ -7,7 +7,7 @@ navbar:
 sections:
   - name: Search Engines
     notes: "Short Section description"
-    color: 'info'
+    color: 'danger'
     links:
       - name: Google
         notes: "Short note which appear as a tooltip."
@@ -17,11 +17,133 @@ sections:
         url: https://google.com
   - name: Dev
     notes: "Short Section description"
-    color: 'primary'
+    color: 'info'
     links:
       - name: GitHub
         notes: "Short note which appear as a tooltip."
         url: https://github.com
       - name: GitLab
+        notes: "Short note which appear as a tooltip."
+        url: https://wykop.pl
+  - name: Different
+    notes: "Short Section description"
+    color: 'info'
+    links:
+      - name: GitHub
+        notes: "Short note which appear as a tooltip."
+        url: https://github.com
+      - name: Wykop
+        notes: "Short note which appear as a tooltip."
+        url: https://wykop.pl
+      - name: GitHub
+        notes: "Short note which appear as a tooltip."
+        url: https://github.com
+      - name: Wykop
+        notes: "Short note which appear as a tooltip."
+        url: https://wykop.pl
+      - name: GitHub
+        notes: "Short note which appear as a tooltip."
+        url: https://github.com
+      - name: Wykop
+        notes: "Short note which appear as a tooltip."
+        url: https://wykop.pl
+      - name: GitHub
+        notes: "Short note which appear as a tooltip."
+        url: https://github.com
+      - name: Wykop
+        notes: "Short note which appear as a tooltip."
+        url: https://wykop.pl
+      - name: GitHub
+        notes: "Short note which appear as a tooltip."
+        url: https://github.com
+      - name: Wykop
+        notes: "Short note which appear as a tooltip."
+        url: https://wykop.pl
+
+  - name: TOTAL_AWSOME
+    notes: "Short Section description"
+    links:
+      - name: GitHub
+        notes: "Short note which appear as a tooltip."
+        url: https://github.com
+      - name: Wykop
+        notes: "Short note which appear as a tooltip."
+        url: https://wykop.pl
+      - name: GitHub
+        notes: "Short note which appear as a tooltip."
+        url: https://github.com
+      - name: Wykop
+        notes: "Short note which appear as a tooltip."
+        url: https://wykop.pl
+      - name: GitHub
+        notes: "Short note which appear as a tooltip."
+        url: https://github.com
+      - name: Wykop
+        notes: "Short note which appear as a tooltip."
+        url: https://wykop.pl
+      - name: GitHub
+        notes: "Short note which appear as a tooltip."
+        url: https://github.com
+      - name: Wykop
+        notes: "Short note which appear as a tooltip."
+        url: https://wykop.pl
+      - name: GitHub
+        notes: "Short note which appear as a tooltip."
+        url: https://github.com
+      - name: Wykop
+        notes: "Short note which appear as a tooltip."
+        url: https://wykop.pl
+  - name: Long Title Quite Be Long
+    notes: "Short Section description"
+    links:
+      - name: GitHub
+        notes: "Short note which appear as a tooltip."
+        url: https://github.com
+      - name: Wykop
+        notes: "Short note which appear as a tooltip."
+        url: https://wykop.pl
+      - name: GitHub
+        notes: "Short note which appear as a tooltip."
+        url: https://github.com
+      - name: Wykop
+        notes: "Short note which appear as a tooltip."
+        url: https://wykop.pl
+      - name: GitHub
+        notes: "Short note which appear as a tooltip."
+        url: https://github.com
+      - name: Wykop
+        notes: "Short note which appear as a tooltip."
+        url: https://wykop.pl
+      - name: GitHub
+        notes: "Short note which appear as a tooltip."
+        url: https://github.com
+      - name: Wykop
+        notes: "Short note which appear as a tooltip."
+        url: https://wykop.pl
+  - name: Long Title Quite Be Long
+    notes: "Short Section description"
+    links:
+      - name: GitHub
+        notes: "Short note which appear as a tooltip."
+        url: https://github.com
+      - name: Wykop
+        notes: "Short note which appear as a tooltip."
+        url: https://wykop.pl
+      - name: GitHub
+        notes: "Short note which appear as a tooltip."
+        url: https://github.com
+      - name: Wykop
+        notes: "Short note which appear as a tooltip."
+        url: https://wykop.pl
+      - name: GitHub
+        notes: "Short note which appear as a tooltip."
+        url: https://github.com
+      - name: Wykop
+        notes: "Short note which appear as a tooltip."
+        url: https://wykop.pl
+      - name: GitHub
+        notes: "Short note which appear as a tooltip."
+        url: https://github.com
+      - name: Wykop
         notes: "Short note which appear as a tooltip."
         url: https://wykop.pl
